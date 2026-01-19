@@ -18,7 +18,7 @@ export class TaskDetail {
   //  this .taskService.deleteTask(this.task.id);
   //  this.change.emit();
     // this.deleteClick.emit();
-    this.taskService.deleteTask(this.task.id)
+    this.taskService.deleteTask(this.task.id);
     // .subscribe({
     //   next: () => this.change.emit()
     // })
@@ -27,5 +27,6 @@ export class TaskDetail {
   onComplete() {
     // this.taskService.changeStatus(this.task.id);
     // this.change.emit();
+    this.taskService.updateTask(this.task.id, this.task.completed);
   }
 }

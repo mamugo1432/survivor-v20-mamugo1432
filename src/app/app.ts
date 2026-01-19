@@ -52,6 +52,8 @@ export class App {
       //     next: (task) =>  this.loadTasks(),
       //     error: (error) => console.log(error)
       //   })
+
+      this.taskService.addTask(this.nuevaTarea.trim());
       this.nuevaTarea = ''; // Limpiar input
       //   // this.tasks = this.taskService.getTasks();
     }

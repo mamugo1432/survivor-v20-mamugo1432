@@ -38,7 +38,11 @@ export class TaskService {
       priority: 'media',
       completed: false
     }
-    return this.httpClient.post<Task>(this.URLBase, newTask);
+    return this.httpClient.post<Task>(this.URLBase, newTask)
+    .subscribe({
+      next:() => this.fetchTasks(),
+      error : () => alert("ERROR AL INTRODUCIR LA TAREA")
+    });
   }
 
   deleteTask(id:string){
@@ -46,5 +50,13 @@ export class TaskService {
     .subscribe({
       next: () => this.fetchTasks()
     })
+  }
+
+  updateTask(id:string, statusCompletedTask:boolean){
+    this.httpClient.patch(this.URLBase + "/" + id, JSON.stringify({completed:!statusCompletedTask}))
+    .subscribe({
+      next: () => this.fetchTasks(),
+      error: (error) => alert("Se ha producido un error al actualizar la tarea")
+    });
   }
 }
