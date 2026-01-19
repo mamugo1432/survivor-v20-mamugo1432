@@ -1,0 +1,2 @@
+.tarjeta-tarea { border: 1px solid #333; padding: 10px; margin-bottom: 5px; display: flex; justify-content: space-between; align-items: center; background: #222; }
+.completada .titulo { text-decoration: line-through; color: #666; }

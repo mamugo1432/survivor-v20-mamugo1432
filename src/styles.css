@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+.contenedor-bunker { background-color: #1a1a1a; color: #0f0; padding: 20px; font-family: 'Courier New', monospace; min-height: 100vh; }
+.panel-control { margin-bottom: 20px; display: flex; gap: 10px; }
+input { background: #333; border: 1px solid #0f0; color: #fff; padding: 10px; flex-grow: 1; }
+button { background: #004d00; color: #0f0; border: 1px solid #0f0; cursor: pointer; padding: 10px; }
+.badge { font-size: 0.8em; border: 1px solid #555; padding: 2px 5px; margin-left: 10px; color: #aaa; }
+.sistema-ok { color: #0f0; text-align: center; margin-top: 20px; }
